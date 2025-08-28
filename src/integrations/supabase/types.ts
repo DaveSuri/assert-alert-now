@@ -14,7 +14,105 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          email: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          email?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_calendars: {
+        Row: {
+          calendar_description: string | null
+          calendar_id: string
+          calendar_name: string
+          created_at: string
+          id: string
+          is_primary: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          calendar_description?: string | null
+          calendar_id: string
+          calendar_name: string
+          created_at?: string
+          id?: string
+          is_primary?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          calendar_description?: string | null
+          calendar_id?: string
+          calendar_name?: string
+          created_at?: string
+          id?: string
+          is_primary?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          created_at: string
+          google_access_token: string | null
+          google_refresh_token: string | null
+          google_token_expires_at: string | null
+          id: string
+          selected_calendar_id: string | null
+          service_enabled: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          google_access_token?: string | null
+          google_refresh_token?: string | null
+          google_token_expires_at?: string | null
+          id?: string
+          selected_calendar_id?: string | null
+          service_enabled?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          google_access_token?: string | null
+          google_refresh_token?: string | null
+          google_token_expires_at?: string | null
+          id?: string
+          selected_calendar_id?: string | null
+          service_enabled?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

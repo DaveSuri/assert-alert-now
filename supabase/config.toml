@@ -1,1 +1,7 @@
 project_id = "cixyffxeygmwqelcwuly"
+
+[functions.sync-calendars]
+verify_jwt = true
+
+[functions.fetch-events]
+verify_jwt = true
