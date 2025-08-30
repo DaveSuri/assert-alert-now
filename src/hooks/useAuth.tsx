@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         .upsert({
           user_id: user.id,
           email: user.email,
-          display_name: user.user_metadata?.full_name || user.email?.split('@')[0],
+          display_name: user.user_metadata?.full_name || user.email?.split('@')[0] || 'User',
           avatar_url: user.user_metadata?.avatar_url,
         }, { onConflict: 'user_id' })
 
